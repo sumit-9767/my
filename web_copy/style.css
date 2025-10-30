@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #000;
+    color: #fff;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewport="0 0 24 24"><text y="20" font-size="20">❤️</text></svg>'), auto;
+}
+
+/* Animated Starry Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #1c1c1c 0%, #000 100%);
+    z-index: -2;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 4s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.countdown {
+    font-size: 1.2rem;
+    color: gold;
+    margin: 20px auto;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255,215,0,0.7);
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ff6b9d;
+    text-shadow: 2px 2px 8px rgba(255, 107, 157, 0.8);
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ffc3a0;
+}
+
+section {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #ff6b9d;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.letter-preview {
+    background: rgba(255, 107, 157, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ff6b9d;
+    transition: background 0.3s;
+    border: 2px dashed #ff6b9d;
+}
+
+.letter-preview:hover {
+    background: rgba(255, 107, 157, 0.3);
+}
+
+.letter-full {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.8;
+    border-left: 4px solid #ff6b9d;
+}
+
+.hidden {
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    border: 3px solid transparent;
+}
+
+.photo:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.5);
+    border-color: #ff6b9d;
+}
+
+.timeline {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: rgba(33, 150, 243, 0.1);
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border-left: 5px solid #2196f3;
+    transition: background 0.3s;
+}
+
+.timeline-item:hover {
+    background: rgba(33, 150, 243, 0.2);
+}
+
+.date {
+    font-weight: 600;
+    color: #64b5f6;
+}
+
+.event {
+    margin-top: 5px;
+    color: #bbdefb;
+}
+
+.gift {
+    background: linear-gradient(135deg, #ff6b9d, #ffa8bd);
+    color: white;
+    padding: 25px 40px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 30px auto;
+    display: inline-block;
+    border: none;
+}
+
+.gift:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(255, 107, 157, 0.6);
+}
+
+.gift-content {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.secret-room input {
+    padding: 12px;
+    font-size: 1rem;
+    margin: 15px;
+    border-radius: 30px;
+    border: 2px solid #e91e63;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-align: center;
+}
+
+.secret-room button {
+    padding: 12px 25px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.secret-room button:hover {
+    background: #c2185b;
+}
+
+.secret-content {
+    background: rgba(233, 30, 99, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(233, 30, 99, 0.5);
+}
+
+#game-area {
+    width: 100%;
+    height: 200px;
+    background: rgba(255,255,255,0.05);
+    position: relative;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px dashed #ff6b9d;
+}
+
+.kiss {
+    position: absolute;
+    font-size: 30px;
+    user-select: none;
+    cursor: pointer;
+    animation: fall 5s linear forwards;
+    z-index: 10;
+}
+
+@keyframes fall {
+    from { top: -50px; opacity: 0; transform: scale(0.5); }
+    to { top: 220px; opacity: 1; transform: scale(1); }
+}
+
+#score, #timer {
+    position: absolute;
+    top: 10px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 0 0 5px black;
+}
+
+#timer { right: 10px; }
+
+.music-player button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.music-player button:hover {
+    background: #c2185b;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #ffc3a0;
+    font-weight: 600;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Confetti container */
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+.qr-section {
+    margin: 40px auto;
+    max-width: 500px;
+    text-align: center;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+}
+.qr-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+}
+.qr-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.copy-btn {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff6b9d;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background 0.2s;
+}
+.copy-btn:hover {
+    background: #c2185b;
+}
+
+/* -------------------------------------------------
+   LOVE POEM GENERATOR
+   ------------------------------------------------- */
+.poem-generator {
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+}
+.gen-poem-btn {
+    background: #ff6b9d;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.gen-poem-btn:hover {
+    background: #c2185b;
+}
+.poem-result {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.07);
+    padding: 20px;
+    border-radius: 12px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #ffeb3b;
+}
+
+/* -------------------------------------------------
+   LOVE METER – VERTICAL, FIXED ON THE RIGHT
+   ------------------------------------------------- */
+#loveMeterContainer {
+    position: fixed;
+    top: 50%;
+    right: 20px;               /* distance from right edge */
+    transform: translateY(-50%);
+    max-width: 80px;
+    text-align: center;
+    color: var(--accent);
+    font-weight: 600;
+    z-index: 1000;             /* stay on top of everything */
+}
+#loveMeterLabel {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* Outer tube */
+#loveMeter {
+    width: 30px;
+    height: 300px;            /* you can make it taller/shorter */
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Fill that rises from bottom → top */
+#loveMeterFill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;               /* will be set by JS */
+    background: linear-gradient(180deg, var(--accent), #ffa8bd);
+    transition: height 0.4s ease;
+}
+/* -------------------------------------------------
+   THEME TOGGLE (sun / moon)
+   ------------------------------------------------- */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+/* -------------------------------------------------
+   GLOBAL VARIABLES (dark / light)
+   ------------------------------------------------- */
+:root {
+    --bg: #000;
+    --text: #fff;
+    --accent: #ff6b9d;
+    --card-bg: rgba(255,255,255,0.07);
+}
+[data-theme="light"] {
+    --bg: #fff;
+    --text: #222;
+    --accent: #e91e63;
+    --card-bg: rgba(0,0,0,0.05);
+}
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+section, .gift, .letter-preview, .gift-content, .secret-content,
+.quiz, .carousel, .map, .video, .qr-section, .poem-generator,
+.game-section, .music-player {
+    background: var(--card-bg);
+}
+h2, .theme-toggle { color: var(--accent); }

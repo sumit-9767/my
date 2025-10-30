@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Happy Birthday, My Love 💖</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="confetti-container"></div>
+    <div class="stars" id="stars"></div>
+
+    <!-- Birthday countdown -->
+    <div id="countdown" class="countdown"></div>
+
+    <!-- Theme toggle (sun / moon) -->
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+
+    <div class="container">
+        <header>
+            <h1>Happy Birthday, <span id="herName">My Beautiful</span> 💖</h1>
+            <p>Every moment with you feels like magic.</p>
+        </header>
+
+        <!-- ==================== LOVE METER ==================== -->
+        <div id="loveMeterContainer">
+            <div id="loveMeterLabel">Your love for me grows as you explore…</div>
+            <div id="loveMeter"><div id="loveMeterFill"></div></div>
+        </div>
+
+        <!-- ==================== LOVE LETTER ==================== -->
+        <section class="love-letter">
+            <h2>💌 A Letter Just For You</h2>
+            <div id="letter-preview" class="letter-preview">Click to read my heart...</div>
+            <div id="letter-full" class="letter-full hidden">
+                <p>My Dearest,</p>
+                <p>From the moment I met you, my world changed in the most beautiful way. Your smile brightens my darkest days, your laugh is my favorite melody, and your love is the greatest gift I’ve ever received.</p>
+                <p>Today, on your special day, I want you to know — you are cherished beyond words. I’m so grateful for every memory we’ve made and excited for all the adventures ahead.</p>
+                <p>Forever yours,<br><strong>Your Sumii</strong></p>
+            </div>
+        </section>
+
+        <!-- ==================== GIFT BOX ==================== -->
+        <section class="gift-box">
+            <h2>🎁 Open Your Birthday Gift!</h2>
+            <div id="gift" class="gift">🎀 Click Me 🎀</div>
+            <div id="gift-content" class="gift-content hidden">
+                <p>Inside this box is all my love, wrapped in pixels and promises…</p>
+                <p><strong>Here’s your gift:</strong> I promise to plan our trip to Manali! ✈️💙</p>
+            </div>
+        </section>
+
+        <!-- ==================== PHOTO GALLERY ==================== -->
+        <section class="photo-gallery">
+            <h2>📸 Our Beautiful Moments</h2>
+            <div class="gallery">
+                <img src="images/photo1.jpg" alt="Us at the beach" class="photo"/>
+                <img src="images/photo2.jpg" alt="Candlelight dinner" class="photo"/>
+                <img src="images/photo3.jpg" alt="Adventure time!" class="photo"/>
+                <img src="images/photo4.jpg" alt="Just us being silly" class="photo"/>
+            </div>
+        </section>
+
+        <!-- ==================== TIMELINE ==================== -->
+        <section class="timeline">
+            <h2>⏳ Our Journey Together</h2>
+            <div class="timeline-item">
+                <div class="date">March 15, 2023</div>
+                <div class="event">The day we met — my heart skipped a beat ❤️</div>
+            </div>
+            <div class="timeline-item">
+                <div class="date">June 22, 2023</div>
+                <div class="event">Our first trip together — under the stars ✨</div>
+            </div>
+            <div class="timeline-item">
+                <div class="date">Today!</div>
+                <div class="event">Your birthday — and I’m the luckiest person alive 🎂</div>
+            </div>
+        </section>
+
+        <!-- ==================== SECRET ROOM ==================== -->
+        <section class="secret-room">
+            <h2>🗝️ Unlock Our Secret Room</h2>
+            <input type="password" id="secret-code" placeholder="Enter password...">
+            <button id="unlock-btn">Unlock 💖</button>
+            <div id="secret-content" class="secret-content hidden">
+                <h3>Shhh... This is just for us.</h3>
+                <p>Remember the place where we took the decison of moving together OUR SECRET ROOM.......</p>
+                <p>I love you more than Chai. My Chayekadi. 😘</p>
+            </div>
+        </section>
+
+        <!-- ==================== QR CODE SECTION ==================== -->
+        <section class="qr-section">
+            <h2>🔐 A Secret Gift for You</h2>
+            <p>Scan the QR code below to open a hidden folder (photos, videos, a love‑letter PDF, …).<br>
+               <em>If you prefer a link, click “Copy link”.</em></p>
+            <div class="qr-wrapper">
+                <img id="qrImg" src="qr.png" alt="Secret QR code" class="qr-img"/>
+                <button id="copyQrLink" class="copy-btn">Copy link</button>
+            </div>
+        </section>
+
+        <!-- ==================== LOVE POEM GENERATOR ==================== -->
+        <section class="poem-generator">
+            <h2>🖋️ Love‑Poem </h2>
+            <p>Click the button and a brand‑new love poem will appear just for you.</p>
+            <button id="genPoemBtn" class="gen-poem-btn">Generate a Poem</button>
+            <div id="poemResult" class="poem-result hidden"></div>
+        </section>
+
+        <!-- ==================== MINI GAME ==================== -->
+        <section class="game-section">
+            <h2>💋 Catch My Kisses! (30 sec)</h2>
+            <div id="game-area">
+                <div id="score">Score: 0</div>
+                <div id="timer">Time: 30</div>
+            </div>
+            <button id="start-game">Start Game ❤️</button>
+        </section>
+
+        <!-- ==================== MUSIC PLAYER ==================== -->
+        <section class="music-player">
+            <h2>🎶 Our Song</h2>
+            <audio id="loveSong" controls>
+                <source src="audio/our-song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button id="playButton">Play Our Song</button>
+        </section>
+
+        <footer>
+            <p>Made with 💘 for you — because you deserve the world.</p>
+            <p>Forever & Always — <strong>Your Name</strong></p>
+        </footer>
+    </div>
+
+    <!-- External confetti lib -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
